@@ -1,2 +1,7 @@
 <h2>Interview Dashboard</h2>
-<p>This is the Interview module landing page.</p>
+<a href="{% url 'add_candidate' %}">Add New Candidate</a>
+<ul>
+  {% for c in candidates %}
+    <li>{{ c.name }} – Round 1: {{ c.round1_status }}, Round 2: {{ c.round2_status }}</li>
+  {% endfor %}
+</ul>
